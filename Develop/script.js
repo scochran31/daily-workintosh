@@ -6,4 +6,10 @@ var currentDay = moment().format('dddd, MMMM Do YYYY');
     console.log(currentDay);
 
 var hour = moment().format('h');
-    console.log(hour);
+    if (hours >= 9 && hour <= 5) {
+        $('.schedule').addClass('present');
+    } else if(hours<9) {
+        $('.schedule').addClass('past');
+    } else {
+        $('.schedule').addClass('future');
+    }
